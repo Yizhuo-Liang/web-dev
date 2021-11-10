@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <title> Assignment 3 </title>
+        <link rel = "stylesheet" href = "../stylesheet.css">
+        <style>
+            .imgGallery {
+                position: relative;
+                top: 30%;
+                width: 70%;
+                height: 60%;
+                left: 15%;
+                right: 15%;
+            }
+
+            
+            .galleryItem1 {
+                width: 100%;
+                position: absolute; top: 5%; left: 0%; z-index: 3;
+            }
+
+            .galleryItem2 {
+                width: 100%; position: absolute; top: 15%; left: 0%; z-index: 2; opacity: 0.7;
+            }
+
+            .galleryItem2:hover {
+                z-index: 10; opacity: 1;
+            }
+
+            .galleryItem3 {
+                width: 100%;
+                position: absolute; top: 25%; left: 0%; z-index: 1; opacity: 0.2;
+            }
+
+            .galleryItem3:hover {
+                z-index: 10; opacity: 1;
+            }
+           
+        </style>
+    </head>
+    
+    <body class = "noBorderAtAll" onmousemove = "move()">
+
+        <div id = "navbar" style="background-color: rgb(21, 84, 143); color: white;" class = "noBorderAtAll">
+            <br>
+            <ul>
+                <li style = "width: 50%">
+                    <h1 class = "h" style = "font-size: xx-large;"> Assignemnts </h1>
+                </li>
+
+                <li style = "padding-left: 30%; width: 19%; text-align: right;">
+                    <a href = "../index.html" style = "font-size: xx-large; color: rgb(133, 184, 231); font-family: Ubuntu Medium; text-decoration: none"> Home </a>
+                </li>
+            </ul>
+
+        </div>
+
+        <div class = "content">
+
+            <h1 class = "h center"> Assignment 5: Positioning Practice </h1>
+
+            <h2 class = "h center" style = "color: rgb(21, 84, 143)"> Move mouse across the images </h2>
+            
+            <div class = "imgGallery">
+                <img src = "steve1.jpeg" alt = "steve photo 1" class = "galleryItem1 roundCornerImg" stlye = "position: absolute; top: 10%; left: 10%; z-index: 3" id = "item1">
+                <img src = "steve2.jpeg" alt = "steve photo 2" class = "galleryItem2 roundCornerImg" stlye = "position: absolute; top: 20%; left: 20%; z-index: 2" id = "item2">
+                <img src = "steve3.jpeg" alt = "steve photo 3" class = "galleryItem3 roundCornerImg" stlye = "position: absolute; top: 30%; left: 30%; z-index: 1" id = "item3">
+            </div>
+
+            <h2 class = 'h center' style = "text-align: center; color: rgb(170, 170, 170);"> Celebrating Steve </h2>
+
+            <p class = "p" style = "position: relative; top: 0px; left: 10%; right: 10%; width: 80%; opacity: 0">
+                You can quote them, disagree with them, glorify or vilify them, but the only thing you can’t do is ignore them because they change things… they push the human race forward, and while some may see them as the crazy ones, we see genius, because the ones who are crazy enough to think that they can change the world, are the ones who do. 
+            </p>
+
+        </div>
+
+        <script src = "../script.js"></script>
+        <script type = "text/javascript">
+            function move() {
+                var style1Var = document.getElementById('item1')
+            var style2Var = document.getElementById('item2');
+            var style3Var = document.getElementById('item3');
+            console.info("waht");
+            
+            if(style2Var.matches('.galleryItem2:hover') || style3Var.matches('.galleryItem3:hover')) {
+                style1Var.style.opacity = 0.3;
+            } else {style1Var.style.opacity = 1;}
+            }
+        </script>
+        
+    </body>
+</html>

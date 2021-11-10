@@ -1,0 +1,83 @@
+<html>
+
+<head>
+    <title> Yizhuo Liang's Homepage </title>
+    <link rel = "stylesheet" href = "garlicSlidesStyle.css">
+    <style>
+        /* Setup the grid system for this slide! */
+        .wrapper {
+            display: grid;
+            margin-top: 30px;
+            grid-template-columns: repeat(8, 1fr);
+            grid-gap: 3%;
+            row-gap: 7%;
+            grid-auto-flow: row;
+        }
+        .one {
+            grid-column: 1 / 4; /* left is inclusive, right is exclusive */
+            grid-row: 1 / 3;
+            background-color: rgb(177, 217, 136);
+        }
+        .two {
+            grid-column: 5 / 9;
+            grid-row: 1 / 3;
+            background-color: rgb(167, 217, 136);
+        }
+        .three {
+            grid-column: 1 / 6;
+            grid-row: 3;
+            background-color: rgb(157, 217, 136);
+        }
+        .four {
+            grid-column: 7 / 9;
+            grid-row: 3;
+            background-color: rgb(147, 217, 136);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id = "navbar" style="background-color: white; color: rgb(29, 29, 29);" class = "noBorderAtAll">
+        <br>
+        <h1 class = "h center80" style = "font-size: xx-large;"> Phase 3 - Get Garlic </h1>
+    </div>
+
+    <div class = "wrapper center80">
+
+        <img src = "assets/truck3.jpg" alt = "some garlic img" class = "grid gridPicFrame one" style = "background-color: rgb(187, 217, 136);">
+
+        <div class = "grid two" style = "color: rgb(0, 0, 0, 0.9); height: auto">
+            <h2 class = 'h'> GET GARLIC, GO WIRELESS</h2>
+            <p class = "p">
+                For stage 3, a flatbed truck carrying thousands of bulbs of garlic drove around NYC, stopping at
+                different NYC wireless network nodes. People with virtual garlic credits could approach the truck
+                and exchange the credits for real garlic or the other way around.
+            </p>
+        </div>
+
+        <div class = "grid three" style = "color: rgb(0, 0, 0, 0.9); height: auto">
+            <p class = "p">
+              At a certain point, the general
+              public was also surrounding the truck and attempting to trade other miscellaneous goods with the
+              people inside. After the people in the truck explained what exactly was happening to the people passing by,
+              they quickly caught on and joined in the trading with the older users in the network, though
+              the newcomers were participating almost exclusively with physical items. Many people could understand the
+              idea behind the project and were eager to join in.
+            </p>
+        </div>
+
+        <a href = "stage4.html" class = "grid four" style = "color: rgb(0, 0, 0, 0.9); height: auto">
+            <h2 class = 'h'> And Phase 4 </h2>
+        </a>
+
+    </div>
+
+        <p class = "center80 p" style = " color: rgba(156, 156, 156, 0.9); width: 50%; padding-top: 60px; text-align: center; margin-top: 4%;"> Potato? Potato.
+        </p>
+
+
+
+</body>
+
+</html>
