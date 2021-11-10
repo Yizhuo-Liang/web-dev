@@ -13,12 +13,48 @@ counter1 = 1;
 counter2 = 1;
 size = carouselImage[0].clientWidth;
 size2 = carouselImage2[0].clientWidth;
-const vpWidth = document.documentElement.clientWidth;
+vpWidth = document.documentElement.clientWidth;
 // const mysteriousOffset = 0.008 * vpWidth;
 const mysteriousOffset = 0;
 
+// Setup the window when loading
 window.addEventListener("load", function () {
     
+    greatestWidth = carouselImage[0].clientWidth;
+    for(i = 1; i < carouselImage.length; i++) {
+        if(carouselImage[i].clientWidth > greatestWidth) greatestWidth = carouselImage[i].clientWidth;
+    }
+
+    // set the widths
+    for(i = 0; i < carouselImage.length; i++) {
+        carouselImage[i].style.width = greatestWidth + 'px';
+        console.log("setted" + carouselImage[i].clientWidth + " " + greatestWidth);
+    }
+
+    size = greatestWidth;
+    carouselSlide.style.transform = 'translateX(' + (-size * counter1 - 0.08 * vpWidth - mysteriousOffset) + "px";
+
+    greatestWidth = carouselImage2[0].clientWidth;
+    for(i = 1; i < carouselImage2.length; i++) {
+        if(carouselImage2[i].clientWidth > greatestWidth) greatestWidth = carouselImage2[i].clientWidth;
+    }
+
+    // set the widths
+    for(i = 0; i < carouselImage2.length; i++) {
+        carouselImage2[i].style.width = greatestWidth + 'px';
+        console.log("setted" + carouselImage2[i].clientWidth + " " + greatestWidth);
+    }
+
+    size2 = greatestWidth;
+    carouselSlide2.style.transform = 'translateX(' + (-size2 * counter2 - 0.16 * vpWidth - mysteriousOffset) + "px";
+});
+
+// setup the window when resized
+window.addEventListener("resize", function () {
+
+    // update viewport width
+    vpWidth = document.documentElement.clientWidth;
+
     greatestWidth = carouselImage[0].clientWidth;
     for(i = 1; i < carouselImage.length; i++) {
         if(carouselImage[i].clientWidth > greatestWidth) greatestWidth = carouselImage[i].clientWidth;
