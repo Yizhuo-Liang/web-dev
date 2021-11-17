@@ -17,8 +17,12 @@ next.addEventListener('click', () => {
     text.innerHTML = count;
 
     if(count === 4) {
-        prev.style.opacity = 0;
+        prev.style.opacity = 0.5;
         prevDisable = true;
+    }
+
+    if(count === 5) {
+        prev.style.opacity = 0;
     }
 
     if(count === 6) {
