@@ -42,7 +42,7 @@ window.addEventListener("load", function () {
     // set the widths
     for(i = 0; i < carouselImage2.length; i++) {
         carouselImage2[i].style.width = greatestWidth + 'px';
-        console.log("setted" + carouselImage2[i].clientWidth + " " + greatestWidth);
+        // console.log("setted" + carouselImage2[i].clientWidth + " " + greatestWidth);
     }
 
     size2 = greatestWidth;
@@ -63,7 +63,7 @@ window.addEventListener("resize", function () {
     // set the widths
     for(i = 0; i < carouselImage.length; i++) {
         carouselImage[i].style.width = greatestWidth + 'px';
-        console.log("setted" + carouselImage[i].clientWidth + " " + greatestWidth);
+        // console.log("setted" + carouselImage[i].clientWidth + " " + greatestWidth);
     }
 
     size = greatestWidth;
@@ -77,7 +77,7 @@ window.addEventListener("resize", function () {
     // set the widths
     for(i = 0; i < carouselImage2.length; i++) {
         carouselImage2[i].style.width = greatestWidth + 'px';
-        console.log("setted" + carouselImage2[i].clientWidth + " " + greatestWidth);
+        // console.log("setted" + carouselImage2[i].clientWidth + " " + greatestWidth);
     }
 
     size2 = greatestWidth;
