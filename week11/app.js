@@ -50,7 +50,7 @@ next.addEventListener('click', () => {
     }
 
     if(count===13){
-        document.body.style.backgroundImage="url('https://yizhuo-liang.github.io/pictures/scream.jpeg%27)";
+        document.body.style.backgroundImage="url('https://yizhuoliang.github.io/pictures/scream.jpeg%27)";
         scream.style.opacity = 1;
     }
 });
